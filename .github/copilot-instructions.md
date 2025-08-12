@@ -1,12 +1,16 @@
+- **Do NOT add Babel config files (babel.config.js, babel.config.ts) if using Turbopack. Babel is not compatible with Turbopack and will break Next.js dev server.**
 # Copilot Instructions for pizza-nextjs
 
 ## Project Overview
 - This is a Next.js app using the `/src/app` directory structure and TypeScript.
 - Bootstrapped with `create-next-app` and designed for Vercel deployment.
+
 - Main entry point: `src/app/page.tsx` (edit this file for homepage changes).
 - Global styles: `src/app/globals.css`.
 - Layout: `src/app/layout.tsx` wraps all pages.
 - Static assets: `public/` (SVGs, icons).
+- **All reusable components should be placed in `src/components/`.**
+- **Layout-related components (e.g., Navbar, Footer) should be placed in `src/components/layout/`.**
 
 ## Developer Workflows
 - **Start dev server:** `npm run dev` (or `yarn dev`, `pnpm dev`, `bun dev`).
@@ -19,8 +23,10 @@
 - Page components are defined in `page.tsx` files within route folders.
 - Layouts are defined in `layout.tsx` files.
 - Use TypeScript for all new code.
+
 - Font optimization via `next/font` (see README for details).
 - No custom API routes or backend logic detected.
+- **Tailwind v4 custom colors and theme variables should be added in `src/app/globals.css`. Do not use `tailwind.config.ts` for color palette changes.**
 
 ## External Dependencies
 - Next.js, React, TypeScript, PostCSS (see `package.json`).

@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-bg: #FFFDF7;
+  --color-primary: #E53935;
+  --color-accent: #FFD600;
+  --color-brown: #3E2723;
+  --color-gray: #F5F5F5;
+  --color-orange: #FFB74D;
+  --background: var(--color-bg);
+  --foreground: var(--color-brown);
 }
 
 @theme inline {
@@ -17,6 +24,12 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+html, body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
 body {
